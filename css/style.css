@@ -1,157 +1,230 @@
-
-
-:root{
-    --color-black: #000;
-    --color-white: #fff;
-    --font-arial: 'Arial', sans-serif;
-    --color-green: #34e89e;
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --font-arial: "Arial", sans-serif;
+  --color-green: #34e89e;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Arial', sans-serif;
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: 
-        auto 1fr auto;
+body {
+  font-family: "Arial", sans-serif;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  overflow-x: scroll;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
+
 /*Header*/
-.header{
-    background-color: rgb(35 37 43);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1000;
+.header {
+  background-color: rgb(35 37 43);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 /*Header Menu*/
-.header__menu{
-    display: flex;
-    gap: 1rem;
+.header__menu {
+  display: flex;
+  gap: 1rem;
 }
 
 /*Header actions*/
-.header__actions{
-    display: flex;
-    gap: 1rem;
+.header__actions {
+  display: flex;
+  gap: 1rem;
 }
 
-/*Main*/
-.main{
-    margin-top: 4rem;
+/**************************** Main ****************************/
+.main {
+  margin-top: 4rem;
+  padding: 0 0.5rem 0 0.5rem;
+  width: 100%;
+  max-width: 24rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/*Footer*/
-.footer{
-    background-color: var(--color-black);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+/*Banner*/
+.banner {
+  padding: 1rem;
+  width: 100%;
+}
+
+.banner__img {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*Animation*/
+.animation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+.anime__banners {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.anime__banners img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+/****************************Footer**************************/
+.footer {
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 /*Navigation*/
-.navigation{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    border-bottom: 2px solid var(--color-green);
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 2px solid var(--color-green);
 }
-.navigation h3{
-    color: var(--color-white);
-    font-size: 1.5rem;
-}
-
-.navigation div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.navigation h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
 }
 
-.navigation div a{
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: var(--font-arial);
+.navigation div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
+.navigation div a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--font-arial);
+}
 
 /*Social Media*/
-.social__media{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border-bottom: 2px solid var(--color-green);
+.social__media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--color-green);
 }
 
-.social__media h3{
-    color: white;
-    font-size: 1.5rem;
+.social__media h3 {
+  color: white;
+  font-size: 1.5rem;
 }
 
-.social__media__icons{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.social__media__icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.social__media__icons div{
-    display: flex;
-    gap: 0.5rem;
+.social__media__icons div {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.social__media__icons p{
-    color: var(--color-white);
-    font-size: 1rem;
-    font-family: var(--font-arial);
-    display: flex;
-    align-items: center;
+.social__media__icons p {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-family: var(--font-arial);
+  display: flex;
+  align-items: center;
 }
 
 /*About*/
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    border-bottom: 2px solid var(--color-green);
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 2px solid var(--color-green);
 }
 
-.about h3{
-    color: var(--color-white);
-    font-size: 1.5rem;
+.about h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
 }
 
-.about__questions{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.about__questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.about__questions a{
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: var(--font-arial);
+.about__questions a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--font-arial);
 }
 
 /*copyright*/
-.copyright{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 0.5rem;
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
 }
-.copyright p{
-    color: var(--color-white);
-    font-size: 1.5rem;
-    font-family: var(--font-arial);
+.copyright p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-family: var(--font-arial);
+}
+
+
+/*prueba*/
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Anime Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!----------------------------------- Header ------------------------------>
     <header class="header">
         <section class="header__menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -46,11 +47,38 @@
             </a>
         </section>
     </header>
+
+
+    <!----------------------------------------- Main ------------------------------------------------->
     <main class="main">
-        <section class="front">
-            <h1>Hola Faidy XD jsjsjsjjs</h1>
+        <section class="banner">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="/assets/img/banner.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/assets/img/espadas.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/assets/img/dragon.png" style="width:100%">
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="animation">
+            <h2>Series mas vistas en 2023</h2>
+            <p>¡Disfruta gratis de los tres primeros episodios de estos simulcasts de octubre de 2024!</p>
+            <div class="anime__banners">
+                <img src="/assets/img/naruto-uzumaki.jpg" alt="">
+                <img src="/assets/img/jujutsu-kaisen.jpg" alt="">
+                <img src="/assets/img/goku-super.jpg" alt="">
+                <img src="/assets/img/demon-slayer.png" alt="">   
+            </div>
         </section>
     </main>
+
+    <!--------------------------------- Footer ---------------------------------------------------->
     <footer class="footer">
         <section class="navigation">
             <h3>Navegación</h3>
@@ -125,7 +153,7 @@
                 <a href="#">Centro de ayuda</a>
                 <a href="#">Términos de Uso</a>
                 <a href="#">Politica de Privacidad</a>
-                <a href="#">Heramientas de aceptación de Cookies</a>
+                <a href="#">Herramientas de aceptación de Cookies</a>
                 <a href="#">Contacto de prensa</a>
                 <a href="#">Hazte con nuestras aplicaciones</a>
                 <a href="#">Canjear Tarjeta Regalo</a>
@@ -134,12 +162,13 @@
         </section>
 
         <section class="copyright">
-            <p>Yesid Callas Desing</p>
+            <p>Yesid Casallas Design</p>
             <p>© Suits, LLC</p>
             <p>Español</p>
         </section>
 
     </footer>
+    <script src="js/animation.js"></script>
 </body>
 
 </html>
